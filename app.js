@@ -15,7 +15,7 @@ operands.forEach(function(operand){
             }else{
                 secondNumber += operand.value;
             }
-            updateDisplay();
+            document.getElementById("display").innerText = `${firstNumber} ${operator1} ${secondNumber}`
     });  
     
 });
@@ -23,7 +23,7 @@ operands.forEach(function(operand){
 operators.forEach(function(operator){
     operator.addEventListener('click',function(){
         operator1 = operator.value;
-        updateDisplay();
+        document.getElementById("display").innerText = `${firstNumber} ${operator1} ${secondNumber}`
     });
 });
 
@@ -33,7 +33,3 @@ clear.addEventListener('click',function(){
     operator1 = "";
     secondNumber = "";
 })
-
-function updateDisplay(){
-     document.getElementById("display").innerText = `${firstNumber} ${operator1} ${secondNumber}`
-}
