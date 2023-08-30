@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(246, 238, 238);
 }
 
 button{
@@ -53,4 +53,8 @@ button{
 button:active {
     background-color: #caccca;
     transform: scale(1.01);
+}
+
+.equalTo{
+    color: black;
 }

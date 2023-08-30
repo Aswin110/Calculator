@@ -24,8 +24,14 @@ operands.forEach(function(operand){
 
 operators.forEach(function(operator){
     operator.addEventListener('click',function(){
-        operator1 = operator.value;
-        document.getElementById("display").innerText = `${firstNumber} ${operator1} ${secondNumber}`
+        if(firstNumber !== "" && operator1 == "" && secondNumber == "" ){
+            operator1 = operator.value;
+            document.getElementById("display").innerText = `${firstNumber} ${operator1} ${secondNumber}`
+        }else{
+            operate()
+            operator1 = operator.value;
+            document.getElementById("display").innerText = `${firstNumber} ${operator1} ${secondNumber}`
+        }
     });
 });
 
@@ -58,6 +64,9 @@ function operate(){
                 break;
         }
         document.getElementById("display").innerText = `${result}`
+        firstNumber = result ;
+        operator1 = '';
+        secondNumber = '';
     }
 }
 
