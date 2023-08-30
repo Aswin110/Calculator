@@ -49,3 +49,8 @@ button{
 .clear, .sign, .percentage{
     background-color: rgb(108, 105, 105);
 }
+
+button:active {
+    background-color: #caccca;
+    transform: scale(1.01);
+}
